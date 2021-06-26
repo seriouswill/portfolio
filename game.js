@@ -90,14 +90,31 @@ const textNodes = [
         options: [
             {
                 text: "Hell Yes!",
-                nextText: 3,
+                nextText: 31,
             },
             {
                 text: "Nope, I'm out!",
-                nextText: 4,
+                nextText: 99,
             },
         ]
     },
+    {
+
+        id: 31,
+        text: 'the stranger turns you right and...         Dazzling lights, blind you. From all directions cheers and yell - You glance around you trying to take it all in, but before you can make sense of it all.. "PLEASE WELCOME ' + playerName + '!\"         A man in his 50s, white hair, smug grin is sat at a stool that simultaneously looks too tall and too small for him.         Music swells around you - lasers, greeen and red swing around the room causing hush amongst what you now see is .. an audience!         You look back to the man in the chair. You\'re nerves subside. Its millionaire. You fucking got this.         The man in the chair becons you forward. Go?',
+        options: [
+            {
+                text: "Yes",
+                nextText: 3,
+            },
+            {
+                text: "No",
+                nextText: 99,
+            }
+        ]
+
+    },
+
     {
         id: 3,
         text: 'You venture forth in search of answers to where you are when you come across a merchant.',
@@ -131,7 +148,7 @@ const textNodes = [
         options: [
             {
                 text: 'Explore the castle',
-                nextText: 4
+                nextText: 99
             },
             {
                 text: 'Find a room to sleep at in the town',
@@ -144,7 +161,7 @@ const textNodes = [
         ]
     },
     {
-        id: 4,
+        id: 99,
         text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
         options: [
             {
