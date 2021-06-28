@@ -2,6 +2,7 @@
 
 const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('score');
+
 const moles = document.querySelector('.mole');
 const countdownBoard = document.querySelector('.countdown');
 const startButton = document.querySelector('.startButton')
@@ -72,4 +73,4 @@ function whack(e) {
     scoreBoard.textContent = score;
 
 };
-moles.forEach(mole => mole.addEventListener('click', whack));
+Object.keys(moles).forEach(mole => mole.addEventListener('click', whack));
