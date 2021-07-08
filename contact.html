@@ -14,36 +14,51 @@
 </head>
 
 <body>
+    <div class="container mt-3">
+        <div class="card">
+            <div class="container my-3">
+                <div class="col mt-3">
 
-    <div class="container">
-        <nav>
-            <ul class="nav nav-pills ">
-                <li class="nav-item">
-                    <a class="nav-link " href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="./about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./link.html">Links</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./writing.html">Writing</a>
-                </li>
-            </ul>
-        </nav>
+
+                    <h1>Will's Portfolio</h1>
+                    <p class="lead">Enjoys Development and Disc Golf!</p>
+                    <a class="twitter-follow-button" href="https://twitter.com/SeriousWill" data-size="large">
+                        Follow @SeriousWill</a>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <div class="container mt-3">
 
     <div class="col">
         <div class="card">
-            <h3 class="m-3">Contact Me</h3>
-            <div class="card">
-                <div class="card-body">
+            <h3 class="card-body">Contact Me</h3>
+            </div>
+            <nav>
+                <ul class="nav nav-pills mt-3">
+                    <li class="nav-item">
+                        <a class="nav-link " href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./link.html">Links</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./writing.html">Writing</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container">
+            <div class="card m-3">
+                <div class="card-body" >
 
-                    <h4 class=" mb-3">Contact</h4>
+                    <h4 class=" mb-3" >Contact</h4>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><strong>Work Email:</strong> william.o'connell@wearecodenation.com
                         </li>
@@ -51,36 +66,38 @@
                         <li class="list-group-item"><strong>Mobile:</strong> 07825481140</li>
                     </ul>
                 </div>
-            </div>
-
+            </div></div>
+            
         </div>
     </div>
+    <div class="container">
     <div class="col">
         <div class="card">
             <h3 class="m-3">Send me a message!</h3>
-            <form name="contact" class="card-body" method="POST" data-netlify="true">
+            <form id="contact-box" name="contact" class="card-body" method="POST" data-netlify="true">
                 <p>
-                  <label><strong>Your Name: </strong><input type="text" name="name" /></label>   
+                  <label for="name" class="m-2"><strong>Your Name: </strong><input type="text" name="name" class="name"/></label>   
                 </p>
                 <p>
-                  <label><strong>Your Email: </strong><input type="email" name="email" /></label>
+                  <label for="email" class="m-2"><strong>Your Email: </strong><input type="email" name="email" class="email"/></label>
                 </p>
                 <p>
-                  <label><strong>Your Role: </strong><select name="role[]" multiple>
-                    <option value="leader">Leader</option>
-                    <option value="follower">Follower</option>
+                  <label class="m-2"><strong>Your Role: </strong><select name="role[]" multiple>
+                    <option value="dev">Dev</option>
+                    <option value="theatre">Actor/Writer</option>
+                    <option value="something">Something Else!</option>
                   </select></label>
                 </p>
                 <p>
-                  <label><strong>Message: </strong><textarea name="message"></textarea></label>
+                  <label for="message"><strong>Message: </strong><textarea id="message" name="message"></textarea></label>
                 </p>
                 <p>
-                  <button type="submit">Send</button>
+                  <button class="btn" type="submit">Send</button>
                 </p>
               </form>
                 </div>
-            </div>
-
+            </div></div>
+ </div>
 
         </div>
     </div>
