@@ -42,14 +42,26 @@
             <h3 class="m-3">Contact Me</h3>
             <div class="card">
                 <div class="card-body">
-
-                    <h4 class=" mb-3">Contact</h4>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Work Email:</strong> william.o'connell@wearecodenation.com
-                        </li>
-                        <li class="list-group-item"><strong>Email:</strong> williamjamesoc@gmail.com</li>
-                        <li class="list-group-item"><strong>Mobile:</strong> 07825481140</li>
-                    </ul>
+                    <form name="contact" method="POST" data-netlify="true">
+                        <p>
+                          <label>Your Name: <input type="text" name="name" /></label>   
+                        </p>
+                        <p>
+                          <label>Your Email: <input type="email" name="email" /></label>
+                        </p>
+                        <p>
+                          <label>Your Role: <select name="role[]" multiple>
+                            <option value="leader">Leader</option>
+                            <option value="follower">Follower</option>
+                          </select></label>
+                        </p>
+                        <p>
+                          <label>Message: <textarea name="message"></textarea></label>
+                        </p>
+                        <p>
+                          <button type="submit">Send</button>
+                        </p>
+                      </form>
                 </div>
             </div>
 
