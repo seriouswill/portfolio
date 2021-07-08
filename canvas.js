@@ -4,7 +4,34 @@ ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 let particleArray;
 
+/// // create rainbow particles
+const colors = [
+    "#0C090A",
+    "#2C3539",
+    "#34282C",
+    "#25383C",
+    "purple",
+    "#3B3131",	
+    "#413839",
+    "#3D3C3A",	
+    "#463E3F",	
+    "#4C4646",
+    "#504A4B",
+    "#565051",
+    "#5C5858",
+    "#625D5D",
+    "#666362",
+    "#6D6968",	
+    "#726E6D",	
+    "#736F6E",
+]
+const randomValue = (list) => {
+    return list[Math.floor(Math.random() * list.length)];
+};
+
+
 // get mouse mouse position ///////////////////////////////
+
 let mouse = {
     x: null,
     y: null,
@@ -18,7 +45,7 @@ window.addEventListener('mousemove',
 
 // create Particle
 class Particle {
-    constructor(x, y, directionX, directionY, size, color) {
+    constructor(x, y, directionX, directionY, size, color,) {
         this.x = x;
         this.y = y;
         this.directionX = directionX;
@@ -27,14 +54,19 @@ class Particle {
         this.color = color;
         this.speedX = this.directionX;
         this.speedY = this.directionY;
+        this.color = color;
     }
+
+    
+
+
+
     // create method to draw individual particle
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-
-        ctx.fillStyle = 'black';
-        ctx.fill();
+        
+        
     }
 
     // check particle position, check mouse position, move the paticle, draw the particle
@@ -47,6 +79,8 @@ class Particle {
             this.directionY = -this.directionY;
             this.speedY = this.directionY;
         }
+        ctx.fillStyle = randomValue(colors)
+        ctx.fill();
         // check mouse position/particle position - collision detection
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
